@@ -21,7 +21,7 @@ export default function ShoppingCart( {productsToBuy, removeProductToBuy} ) {
     return (
         <div>
             <ul>{productsToBuy.map(renderProductToBuy)}</ul>
-            Total: ${" "}{productsToBuy.reduce( (preTotal, product) => preTotal + product.price, 0)}
+            Total: ${" "}{productsToBuy.reduce( (preTotal, product) => preTotal + (+product.price), 0)}
         </div>
     );
 }
